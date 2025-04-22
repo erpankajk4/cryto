@@ -8,7 +8,7 @@ export default function Home() {
     const { scrollYProgress } = useScroll();
     // Transform scroll position into a color (change color from white to blue as you scroll)
     const backgroundColor = useTransform(scrollYProgress, [0, 1], ['#ffffff', '#0a0a0a']);
-    const textColor = useTransform(scrollYProgress, [0, 1], ['#0a0a0a', '#4d4d4d']);
+    const textColor = useTransform(scrollYProgress, [0, 1], ['#494949', '#c0c0c0']);
     const mediaOpacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
     const [isEnd, setIsEnd] = useState(false);
     useMotionValueEvent(scrollYProgress, 'change', (latest) => {
