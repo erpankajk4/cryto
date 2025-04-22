@@ -43,7 +43,7 @@ export default function Home() {
         loop
         muted 
         style={{ opacity: mediaOpacity }}
-        className="w-full h-60 object-cover rounded-3xl z-10 absolute inset-0"
+        className="w-full h-96 object-cover rounded-3xl z-10 absolute inset-0"
       />
            <div className="grid grid-rows-2 h-full grid-cols-2 md:grid-cols-6 absolute inset-0 z-20">
       {Array.from({ length: gridItemLength}).map((_, index) => (
