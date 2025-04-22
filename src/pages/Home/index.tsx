@@ -29,13 +29,13 @@ export default function Home() {
       Remarkable <br />
       Mining Experience.
     </motion.h1>
-      <div className='relative'>
+      <div className='relative rounded-3xl'>
       <video
         src={darkVideo}
         autoPlay
         loop   
         muted   
-        className="w-full h-96 object-cover rounded-4xl"
+        className="w-full h-96 object-cover "
       />
       <motion.video
         src={lightVideo}
@@ -43,7 +43,7 @@ export default function Home() {
         loop
         muted 
         style={{ opacity: mediaOpacity }}
-        className="w-full h-96 object-cover rounded-3xl z-10 absolute inset-0"
+        className="w-full h-96 object-cover z-10 absolute inset-0"
       />
            <div className="grid grid-rows-2 h-full grid-cols-2 md:grid-cols-6 absolute inset-0 z-20">
       {Array.from({ length: gridItemLength}).map((_, index) => (
