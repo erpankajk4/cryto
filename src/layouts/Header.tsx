@@ -5,7 +5,6 @@ import { motion, useScroll, useTransform } from 'motion/react';
 
 export default function Header() {
   const { scrollYProgress } = useScroll();
-  // Transform scroll position into a color (change color from white to blue as you scroll)
   const textColor = useTransform(scrollYProgress, [0, 1], ['#494949', '#c0c0c0']);
   const mediaOpacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
   return (
