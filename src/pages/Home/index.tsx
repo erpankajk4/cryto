@@ -6,13 +6,12 @@ import { useState } from 'react';
 
 export default function Home() {
     const { scrollYProgress } = useScroll();
-    // Transform scroll position into a color (change color from white to blue as you scroll)
     const backgroundColor = useTransform(scrollYProgress, [0, 1], ['#ffffff', '#0a0a0a']);
     const textColor = useTransform(scrollYProgress, [0, 1], ['#494949', '#c0c0c0']);
     const mediaOpacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
     const [isEnd, setIsEnd] = useState(false);
     useMotionValueEvent(scrollYProgress, 'change', (latest) => {
-      setIsEnd(latest > 0.5); // set true if scrolled past 50%
+      setIsEnd(latest > 0.5); 
     });
 
     const gridItemLength = window.innerWidth <= 768 ? 4 : 12;
@@ -30,18 +29,19 @@ export default function Home() {
       Remarkable <br />
       Mining Experience.
     </motion.h1>
-      {/* Image or Video with scroll-based opacity */}
       <div className='relative'>
       <video
         src={darkVideo}
         autoPlay
-        loop     
+        loop   
+        muted   
         className="w-full h-96 object-cover rounded-4xl"
       />
       <motion.video
         src={lightVideo}
         autoPlay
         loop
+        muted 
         style={{ opacity: mediaOpacity }}
         className="w-full h-60 object-cover rounded-3xl z-10 absolute inset-0"
       />
